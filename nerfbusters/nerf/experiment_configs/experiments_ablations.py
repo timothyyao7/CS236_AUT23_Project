@@ -2,8 +2,12 @@ from nerfbusters.nerf.experiment_configs.utils import Argument
 
 dataset_lists = [
     Argument(
-        name="garbage",
-        arg_string="--data data/nerfbusters-dataset/garbage --pipeline.nerf_checkpoint_path outputs-checkpoints/garbage-baseline.ckpt --output-dir outputs-postprocessed/garbage",
+        # name="garbage",
+        # arg_string="--data data/nerfbusters-dataset/garbage --pipeline.nerf_checkpoint_path outputs-checkpoints/garbage-baseline.ckpt --output-dir outputs-postprocessed/garbage",
+        # name = "poster",
+        # arg_string="--data data/nerfbusters-dataset/poster --pipeline.nerf_checkpoint_path outputs-checkpoints/poster-baseline.ckpt --output-dir outputs-postprocessed/poster",
+        name = "hoover",
+        arg_string="--data data/stanford-dataset/hoover --pipeline.nerf_checkpoint_path outputs-checkpoints/hoover-baseline.ckpt --output-dir outputs-postprocessed/hoover",
     )
 ]
 

@@ -73,7 +73,8 @@ def launch_experiments(jobs, dry_run: bool = False, gpu_ids: Optional[List[int]]
         threads = []
         while gpu_devices_available and jobs:
             gpu = gpu_devices_available.pop(0)
-            command = f"CUDA_VISIBLE_DEVICES={gpu} " + jobs.pop(0)
+            # command = f"CUDA_VISIBLE_DEVICES={gpu} " + jobs.pop(0)
+            command = jobs.pop(0)
 
             def task():
                 print(f"Command:\n{command}\n")
